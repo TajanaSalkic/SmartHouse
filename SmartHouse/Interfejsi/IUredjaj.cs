@@ -8,6 +8,9 @@ namespace SmartHouse.Interfejsi
 {
     interface IUredjaj
     {
-        void podesi(Double broj);
+        void podesi(int broj);
+        void povecaj(int broj);
+
+        void smanji(int broj);
     }
 }
