@@ -11,23 +11,20 @@ namespace SmartHouse.Klase
     public class Rerna : Uredjaj, IUredjaj
     {
 
-        private long Temperatura {  get; set; }
+        private Int64 Temperatura {  get; set; }
 
         private MjernaJedinica MjernaJedinica { get; set; }
 
-        private Timer tajmer;
 
-        public Rerna(string n, string m , bool u, VrstaKonekcije vkm, Int64 t, MjernaJedinica m )
+        public Rerna(string n, string ml , bool u, VrstaKonekcije vkm, Int64 t, MjernaJedinica m )
         {
             Naziv = n;
-            MjestoUKuci = m;
+            MjestoUKuci = ml;
             ukljucen = u;
-            VrstaKonekcije = vk;
+            VrstaKonekcije = vkm;
             Temperatura = t;
             MjernaJedinica = m;
-            tajmer = new Timer();
-            tajmer.Elapsed += iskljuci;
-            tajmer.AutoReset = false;
+          
 
 
         }
@@ -35,15 +32,18 @@ namespace SmartHouse.Klase
         {
             if (MjernaJedinica.Equals(MjernaJedinica.F))
             {
-                Double FTemperatura =  (Temperatura-32)*5/9;
+
+                Double CTemperatura =  (Temperatura-32)*5/9;
                 Temperatura = t;
-                Console.WriteLine(Naziv + " ima temperaturu od " + FTemperatura + " farenhajta odnosno " + Temperatura + " celzija");
+                Console.WriteLine(Naziv + " ima temperaturu od "+ Temperatura + " farenhajta");
 
             }
             else
             {
-                double CTemperatura = (t - 32) * 5 / 9.0;
-                Console.WriteLine($"{Naziv} ima temperaturu od {t}°F ({CTemperatura}°C).");
+                double FTemperatura = (t - 32) * 5 / 9.0;
+                Temperatura = t;
+
+                Console.WriteLine($"{Naziv} ima temperaturu od {t}°C ({FTemperatura}°F).");
 
             }
 
@@ -51,38 +51,49 @@ namespace SmartHouse.Klase
 
         public void povecaj(int broj)
         {
-            Temperatura += broj;
+            if (ukljucen)
+            {
 
-            Console.WriteLine("Uredjaju " + Naziv + " je povecana temperatura za " + broj + " i sada iznosi: " + Temperatura + " " + MjernaJedinica.ToString());
+                Temperatura += broj;
+
+                Console.WriteLine("Uredjaju " + Naziv + " je povecana temperatura za " + broj + " i sada iznosi: " + Temperatura + " " + MjernaJedinica.ToString());
+            }
+            else
+            {
+                Console.WriteLine(Naziv + " je trenutno ugasen");
+            }
+
 
         }
 
         public void smanji(int broj)
         {
+            if (ukljucen) { 
             Temperatura -= broj;
 
             Console.WriteLine("Uredjaju " + Naziv + " je smanjena temperatura za " + broj + " i sada iznosi: " + Temperatura + " " + MjernaJedinica.ToString());
-
         }
+            else
+            {
+                Console.WriteLine(Naziv + " je trenutno ugasen");
+            }
+
+}
 
         public override void prikazDetalja()
         {
-            Console.WriteLine("Uredjaj " + Naziv + " se nalazi u/na " + MjestoUKuci + " povezana putem " + VrstaKonekcije.ToString() + ". Trenutno je " + ukljucen ? "ukljucen/a" : "ikljucen/a");
-        }
-
-        public void PostaviTajemr(int m)
-        {
-            if (ukljucen)
+            if (ukljucen == false)
             {
-                tajmer.Interval = m*60*1000;
-                tajmer.Start();
-                Console.WriteLine("Vrijeme je postavljeno na " + m + "minuta");
+                Temperatura = 0;
+                Console.WriteLine("Uredjaj " + Naziv + " se nalazi u/na " + MjestoUKuci + " povezana putem " + VrstaKonekcije.ToString() + ".\n Trenutno je " + (ukljucen ? "ukljucen/a" : "ikljucen/a") + " i ima temperaturu od " + Temperatura + " " + MjernaJedinica.ToString());
+
             }
             else
             {
-                Console.WriteLine("Nemoguce postaviti uredjaj" + Naziv + " na odredjeno virjeme jer nije ukljucen/a");
-                return;
+                Console.WriteLine("Uredjaj " + Naziv + " se nalazi u/na " + MjestoUKuci + " povezana putem " + VrstaKonekcije.ToString() + ".\n Trenutno je " + (ukljucen ? "ukljucen/a" : "ikljucen/a") + " i ima temperaturu od " + Temperatura + " " + MjernaJedinica.ToString());
             }
-        }
+            }
+
+       
     }
 }
