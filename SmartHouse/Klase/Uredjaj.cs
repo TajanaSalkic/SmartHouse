@@ -11,7 +11,6 @@ namespace SmartHouse.Klase
     {
         protected String Naziv { get; set; }
         protected String MjestoUKuci { get; set; }
-        protected Int64 Kolicina { get; set; }
 
         protected bool ukljucen {  get; set; }
         protected VrstaKonekcije VrstaKonekcije { get; set; }
@@ -28,6 +27,6 @@ namespace SmartHouse.Klase
             Console.WriteLine(this.Naziv + " je iskljucen/iskljucena!");
         }
 
-        public void prikazDetalja();
+        public virtual void prikazDetalja() { }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DT User\\source\\repos\\SmartHouse\\SmartHouse\\SmartHouse.csproj": {}
+    "D:\\SmartHouse\\SmartHouse\\SmartHouse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DT User\\source\\repos\\SmartHouse\\SmartHouse\\SmartHouse.csproj": {
+    "D:\\SmartHouse\\SmartHouse\\SmartHouse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DT User\\source\\repos\\SmartHouse\\SmartHouse\\SmartHouse.csproj",
+        "projectUniqueName": "D:\\SmartHouse\\SmartHouse\\SmartHouse.csproj",
         "projectName": "SmartHouse",
-        "projectPath": "C:\\Users\\DT User\\source\\repos\\SmartHouse\\SmartHouse\\SmartHouse.csproj",
+        "projectPath": "D:\\SmartHouse\\SmartHouse\\SmartHouse.csproj",
         "packagesPath": "C:\\Users\\DT User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DT User\\source\\repos\\SmartHouse\\SmartHouse\\obj\\",
+        "outputPath": "D:\\SmartHouse\\SmartHouse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

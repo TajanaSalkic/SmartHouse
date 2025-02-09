@@ -3,3 +3,18 @@ C:\Users\DT User\source\repos\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.
 C:\Users\DT User\source\repos\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.AssemblyInfo.cs
 C:\Users\DT User\source\repos\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.csproj.CoreCompileInputs.cache
 C:\Users\DT User\source\repos\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.sourcelink.json
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.GeneratedMSBuildEditorConfig.editorconfig
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.AssemblyInfoInputs.cache
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.AssemblyInfo.cs
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.csproj.CoreCompileInputs.cache
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.sourcelink.json
+D:\SmartHouse\SmartHouse\bin\Debug\net6.0\SmartHouse.exe
+D:\SmartHouse\SmartHouse\bin\Debug\net6.0\SmartHouse.deps.json
+D:\SmartHouse\SmartHouse\bin\Debug\net6.0\SmartHouse.runtimeconfig.json
+D:\SmartHouse\SmartHouse\bin\Debug\net6.0\SmartHouse.dll
+D:\SmartHouse\SmartHouse\bin\Debug\net6.0\SmartHouse.pdb
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.dll
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\refint\SmartHouse.dll
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.pdb
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\SmartHouse.genruntimeconfig.cache
+D:\SmartHouse\SmartHouse\obj\Debug\net6.0\ref\SmartHouse.dll
